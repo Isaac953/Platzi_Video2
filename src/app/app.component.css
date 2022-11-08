@@ -1,3 +1,20 @@
-.header {
-  background-color: blue;
+header {
+  /* background-color: #0f52ba; */
+  height: 70px;
+  border-style: solid;
+  color: red;
+}
+
+main {
+  /* background: linear-gradient(#0f52ba, #055052); */
+  height: 100vh;
+  border-style: solid;
+  color: purple;
+}
+
+footer {
+  /* background-color: #055052; */
+  height: 70px;
+  border-style: solid;
+  color: gray;
 }
