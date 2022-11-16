@@ -6,7 +6,9 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 
 - PT-01: **Integrar Bootstrap y creación del Header, Main y Footer**.
 
-## 02 Header (November 09 - November 10)
+## 02 Header (November 09 - November 15)
 
 - PT-02: **Completar contenido y diseño del Header**.
 - PT-03: **Estilizar Dropdown de manera preliminar y deploy a Github pages**.
+
+## 03 Footer (November 15)
