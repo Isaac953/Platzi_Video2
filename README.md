@@ -9,3 +9,4 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 ## 02 Header (November 09 - November 10)
 
 - PT-02: **Completar contenido y diseño del Header**.
+- PT-03: **Estilizar Dropdown de manera preliminar y deploy a Github pages**.
