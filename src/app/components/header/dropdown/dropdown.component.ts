@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownComponent implements OnInit {
   imgProfile = './assets/logo/user_icon.png';
+  profile = 'Perfil';
+  altname = 'User';
   profileNavs: any[] = [
     {
       option: 'Cuenta',

@@ -9,11 +9,11 @@
 
 
 <div class="dropdown">
-  <div class="d-flex justify-content-center align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
-    <img class="profile-user" src="{{imgProfile}}" alt="User">
-    <span class="fs-6 fw-bold fw-light">Perfil</span>
+  <div class="d-flex justify-content-center align-items-center">
+    <img class="profile-user" src="{{imgProfile}}" alt="{{altname}}">
+    <span class="fs-6 fw-bold fw-light">{{profile}}</span>
   </div>
-  <ul class="dropdown-menu bg-dark">
+  <ul class="dropdown-menu">
     <li *ngFor=" let profileNav of profileNavs" [ngClass]="profileNav.class"><a href="{{profileNav.url}}"
         class="dropdown-item text-white fw-bold">{{profileNav.option}}</a></li>
   </ul>
