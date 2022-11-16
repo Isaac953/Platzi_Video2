@@ -6,6 +6,10 @@
   text-align: end;
 }
 
+.dropdown-item:hover {
+  background-color: red;
+}
+
 .profile-user {
   margin-right: 5px;
   width: 40px;
