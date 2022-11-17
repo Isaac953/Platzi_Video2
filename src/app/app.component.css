@@ -11,8 +11,14 @@ main {
 }
 
 footer {
-  /* background-color: #055052; */
+  background-color: #055052;
   height: 70px;
-  border-style: solid;
-  color: gray;
 }
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 1023px) {
+  footer {
+    height: 90px;
+  }
+}
+/* End Media Queries Screens 767px */

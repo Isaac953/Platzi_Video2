@@ -1,0 +1,11 @@
+.nav-item {
+  margin-left: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

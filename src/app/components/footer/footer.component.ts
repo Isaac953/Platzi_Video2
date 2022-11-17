@@ -6,6 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
+  footerNavs: any[] = [
+    {
+      option: 'Terminos de uso',
+      url: '#',
+    },
+    {
+      option: 'Declaración de privacidad',
+      url: '#',
+    },
+    {
+      option: 'Centro de ayuda',
+      url: '#',
+    },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {}

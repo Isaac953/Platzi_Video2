@@ -1,1 +1,12 @@
-<p>footer works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngFor=" let footerNav of footerNavs"><a class="nav-link" href="{{footerNav.url}}"
+              class="text-white fw-bold">{{footerNav.option}}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
