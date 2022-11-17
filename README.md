@@ -14,3 +14,5 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 ## 03 Footer (November 16)
 
 - PT-04: **Estilizar y agregar listado de opciones del Footer**.
+
+## 04 Error 404 (November 17)
