@@ -17,4 +17,4 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 
 ## 04 Error 404 (November 17)
 
-- PT-05: **Crear el módulo de routing para los componentes del main**.
+- PT-05: **Crear el módulo de routing para los componentes del main y ajustes menores de avances realizados**.
