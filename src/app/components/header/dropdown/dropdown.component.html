@@ -14,7 +14,7 @@
     <span class="fs-6 fw-bold fw-light">{{profile}}</span>
   </div>
   <ul class="dropdown-menu">
-    <li *ngFor=" let profileNav of profileNavs" [ngClass]="profileNav.class"><a href="{{profileNav.url}}"
+    <li *ngFor=" let profileNav of profileNavs" [ngClass]="profileNav.class"><a routerLink={{profileNav.url}}
         class="dropdown-item text-white fw-bold">{{profileNav.option}}</a></li>
   </ul>
 </div>

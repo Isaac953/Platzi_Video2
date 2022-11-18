@@ -16,3 +16,5 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-04: **Estilizar y agregar listado de opciones del Footer**.
 
 ## 04 Error 404 (November 17)
+
+- PT-05: **Crear el módulo de routing para los componentes del main**.

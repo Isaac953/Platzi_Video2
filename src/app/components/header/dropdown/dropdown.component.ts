@@ -12,26 +12,26 @@ export class DropdownComponent implements OnInit {
   profileNavs: any[] = [
     {
       option: 'Cuenta',
-      url: '#',
+      url: '/home',
     },
     {
       option: 'Cerrar Sesión',
-      url: '#',
+      url: '/home',
     },
     {
       class: 'dropdown-divider',
     },
     {
       option: 'Registro',
-      url: '#',
+      url: '/sign-in',
     },
     {
       option: 'Iniciar Sesión',
-      url: '#',
+      url: '/login',
     },
     {
       option: 'Error 404',
-      url: '#',
+      url: '/error-404',
     },
   ];
 
