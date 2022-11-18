@@ -1,4 +1,8 @@
 /* Start Media Queries Screens 768px and 1024px */
+.dropdown {
+  cursor: pointer;
+}
+
 .dropdown:hover > .dropdown-menu {
   display: block;
   position: absolute;

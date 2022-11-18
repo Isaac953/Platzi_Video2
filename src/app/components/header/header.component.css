@@ -1,6 +1,7 @@
 /* Start Media Queries Screens 768px and 1024px */
 .logo {
   width: 200px;
+  cursor: pointer;
 }
 /* End Media Queries Screens 768px and 1024px */
 

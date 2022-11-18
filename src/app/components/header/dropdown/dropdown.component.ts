@@ -12,11 +12,11 @@ export class DropdownComponent implements OnInit {
   profileNavs: any[] = [
     {
       option: 'Cuenta',
-      url: '/home',
+      url: '/maintenance',
     },
     {
       option: 'Cerrar Sesión',
-      url: '/home',
+      url: '/maintenance',
     },
     {
       class: 'dropdown-divider',
