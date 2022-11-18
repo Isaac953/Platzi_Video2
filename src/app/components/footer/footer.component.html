@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 d-flex justify-content-center">
       <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav d-flex flex-lg-row flex-sm-column">
-          <li class="nav-item" *ngFor=" let footerNav of footerNavs"><a class="nav-link" href="{{footerNav.url}}"
-              class="text-white fw-bold">{{footerNav.option}}</a></li>
+        <ul class="nav navbar-nav d-flex justify-content-center flex-row">
+          <li class="nav-item" *ngFor=" let footerNav of footerNavs"><a routerLink={{footerNav.url}} class="nav-link"
+              class="text-white fw-normal">{{footerNav.option}}</a></li>
         </ul>
       </nav>
     </div>

@@ -1,5 +1,6 @@
 .nav-item {
-  margin-right: 25px;
+  padding: 3px 15px;
+  font-size: 17px;
 }
 
 a {
@@ -9,3 +10,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Start Media Queries Screens 1023px */
+@media screen and (max-width: 1023px) {
+  .nav-item {
+    font-size: 15px;
+  }
+}
+/* End Media Queries Screens 1023px */
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 767px) {
+  .nav-item {
+    font-size: 13px;
+  }
+}
+/* End Media Queries Screens 767px */

@@ -9,15 +9,15 @@ export class FooterComponent implements OnInit {
   footerNavs: any[] = [
     {
       option: 'Terminos de uso',
-      url: '#',
+      url: '/home',
     },
     {
       option: 'Declaración de privacidad',
-      url: '#',
+      url: '/home',
     },
     {
       option: 'Centro de ayuda',
-      url: '#',
+      url: '/home',
     },
   ];
 

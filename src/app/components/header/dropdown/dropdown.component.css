@@ -1,13 +1,23 @@
 /* Start Media Queries Screens 768px and 1024px */
 .dropdown:hover > .dropdown-menu {
   display: block;
-  margin-left: -73px;
+  position: absolute;
+  right: -5px;
   text-align: end;
-  background-color: #100f0f;
+  background-color: #181818;
 }
 
-.dropdown-item:hover {
-  background-color: #c21010;
+.dropdown-menu {
+  min-width: 170px;
+}
+
+.dropdown-item {
+  font-size: 16px;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #0d4c92;
 }
 
 .profile-user {
@@ -18,8 +28,21 @@
 
 span {
   user-select: none;
+  font-size: 16px;
 }
-/* End Media Queries Screens 768px and 1024px */
+/* End Media Queries Screens 1024px */
+
+/* Start Media Queries Screens 1023px */
+@media screen and (max-width: 1023px) {
+  .dropdown-menu {
+    min-width: 160px;
+  }
+
+  .dropdown-item {
+    font-size: 14px;
+  }
+}
+/* End Media Queries Screens 1023px */
 
 /* Start Media Queries Screens 767px */
 @media screen and (max-width: 767px) {
@@ -27,9 +50,17 @@ span {
     margin-left: -75px;
   }
 
+  .dropdown-menu {
+    min-width: 150px;
+  }
+
   .profile-user {
     width: 37px;
     height: 37px;
+  }
+
+  .dropdown-item {
+    font-size: 12px;
   }
 }
 /* End Media Queries Screens 767px */

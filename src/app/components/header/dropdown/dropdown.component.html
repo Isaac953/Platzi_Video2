@@ -1,20 +1,10 @@
-<!-- <img src="./assets/logo/user_icon.png" width="40" height="40" class="rounded-circle">
-<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  Perfil
-</button>
-<ul class="dropdown-menu dropdown-menu-left">
-  <li><button class="dropdown-item" type="button">Cuenta</button></li>
-  <li><button class="dropdown-item" type="button">Cerrar Sesión</button></li>
-</ul> -->
-
-
 <div class="dropdown">
   <div class="d-flex justify-content-center align-items-center">
     <img class="profile-user" src="{{imgProfile}}" alt="{{altname}}">
-    <span class="fs-6 fw-bold fw-light">{{profile}}</span>
+    <span class="fw-bold fw-light">{{profile}}</span>
   </div>
   <ul class="dropdown-menu">
     <li *ngFor=" let profileNav of profileNavs" [ngClass]="profileNav.class"><a routerLink={{profileNav.url}}
-        class="dropdown-item text-white fw-bold">{{profileNav.option}}</a></li>
+        class="dropdown-item text-white fw-normal">{{profileNav.option}}</a></li>
   </ul>
 </div>
