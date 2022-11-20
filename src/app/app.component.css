@@ -5,10 +5,8 @@ header {
 }
 
 main {
-  /* background: linear-gradient(#0f52ba, #055052); */
+  background: linear-gradient(#0f52ba, #055052);
   height: 100vh;
-  border-style: solid;
-  color: purple;
 }
 
 footer {

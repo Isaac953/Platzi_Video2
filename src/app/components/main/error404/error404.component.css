@@ -1,0 +1,77 @@
+.error_404 {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.error_404 h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.error_404 p {
+  font-size: 20px;
+
+  color: white;
+}
+
+.text {
+  font-size: 1em;
+
+  margin-top: 56px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+
+.animated {
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+
+  animation-fill-mode: both;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+
+/* Start Media Queries Screens 1023px */
+@media screen and (max-width: 1023px) {
+  .error_404 h1 {
+    font-size: 76px;
+  }
+  
+  .error_404 p {
+    font-size: 18px;
+  }
+}
+/* End Media Queries Screens 1023px */
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 767px) {
+  .error_404 h1 {
+    font-size: 72px;
+  }
+  
+  .error_404 p {
+    font-size: 16px;
+  }
+}
+/* End Media Queries Screens 767px */
