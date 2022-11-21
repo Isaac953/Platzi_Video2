@@ -21,3 +21,5 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-06: **Agregar contenido y diseño a componente error 404**.
 
 ## 05 Login (November 21)
+
+- PT-07: **Agregar HTML básico de forma dinámica en Angular**.

@@ -1,1 +1,21 @@
-<p>login works!</p>
+<section class="login__container">
+  <h2>{{loginName}}</h2>
+  <form class="login__container--form">
+    <input *ngFor=" let inputValue of inputValues" class="input" type="{{inputValue.type}}"
+      placeholder="{{inputValue.placeholder}}" />
+    <button class="button">{{loginName}}</button>
+    <div class="login__container--remember-me">
+      <label>
+        <input type="checkbox" name="" id="cbox1" value="checkbox" />{{checkboxValue}}
+      </label>
+      <a routerLink={{urlMaintenance}}>{{forgetPassword}}</a>
+    </div>
+  </form>
+  <section class="login__container--social-media">
+    <div *ngFor=" let socialMedia of socialMedias"><img src="{{socialMedia.logo}}" alt="{{socialMedia.alt}}" />
+      {{socialMedia.login}}</div>
+  </section>
+  <p class="login__container--register">
+    {{neverAccount}} <a routerLink={{urlSignin}}>{{signin}}</a>
+  </p>
+</section>
