@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   loginName = 'Inicia sesión';
-  checkboxValue = 'Recuérdame';
+  checkboxValue = ' Recuérdame';
   forgetPassword = 'Olvidé mi contraseña';
   neverAccount = 'No tienes ninguna cuenta';
   signin = 'Registrate';
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     },
   ];
 
-  socialMedias: any [] = [
+  socialMedias: any[] = [
     {
       login: 'Inicia sesión con Google',
       logo: './assets/icons/google-icon.webp',

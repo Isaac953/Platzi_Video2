@@ -23,3 +23,4 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 ## 05 Login (November 21)
 
 - PT-07: **Agregar HTML básico de forma dinámica en Angular**.
+- PT-08: **Integrar diseño CSS de origen al componente**.

@@ -6,7 +6,8 @@ header {
 
 main {
   background: linear-gradient(#0f52ba, #055052);
-  height: 100vh;
+  height: 125vh;
+  /* height: 100vh; */
 }
 
 footer {
