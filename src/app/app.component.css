@@ -6,8 +6,28 @@ header {
 
 main {
   background: linear-gradient(#0f52ba, #055052);
-  height: 125vh;
+  /* height: 125vh; */
   /* height: 100vh; */
+}
+
+.vh-home {
+  height: 100vh;
+}
+
+.vh-login {
+  height: 125vh;
+}
+
+.vh-sign-in {
+  height: 100vh;
+}
+
+.vh-error-404 {
+  height: 100vh;
+}
+
+.vh-maintenance {
+  height: 100vh;
 }
 
 footer {
@@ -18,8 +38,52 @@ footer {
 
 /* Start Media Queries Screens 1023px */
 @media screen and (max-width: 1023px) {
+  .vh-home {
+    height: 100vh;
+  }
+
+  .vh-login {
+    height: 135vh;
+  }
+
+  .vh-sign-in {
+    height: 100vh;
+  }
+
+  .vh-error-404 {
+    height: 100vh;
+  }
+
+  .vh-maintenance {
+    height: 100vh;
+  }
+
   footer {
     height: 75px;
   }
 }
 /* End Media Queries Screens 1023px */
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 767px) {
+  .vh-home {
+    height: 100vh;
+  }
+
+  .vh-login {
+    height: 110vh;
+  }
+
+  .vh-sign-in {
+    height: 100vh;
+  }
+
+  .vh-error-404 {
+    height: 100vh;
+  }
+
+  .vh-maintenance {
+    height: 100vh;
+  }
+}
+/* End Media Queries Screens 767px */

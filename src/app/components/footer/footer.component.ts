@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteService } from 'src/app/services/route.service';
 
 @Component({
   selector: 'footer',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
+  nameRoute: any;
+
   footerNavs: any[] = [
     {
       option: 'Terminos de uso',
@@ -21,7 +24,15 @@ export class FooterComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private routeService: RouteService) {}
+
+  /* Start Function send Route in Main Content */
+  clickRoute = (route: string) => {
+    this.nameRoute = route;
+    this.routeService.route$.emit(this.nameRoute);
+    window.scrollTo(0, 0);
+  };
+  /* End Function send Route in Main Content */
 
   ngOnInit(): void {}
 }

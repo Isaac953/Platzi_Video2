@@ -1,3 +1,4 @@
+/* Start Media Queries Screens 1024px */
 .login__container {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid white;
@@ -61,6 +62,7 @@
   padding: 0px 20px;
   outline: none;
   height: 50px;
+  color: white;
 }
 
 ::placeholder {
@@ -80,3 +82,24 @@
   letter-spacing: 1px;
   margin: 10px 0px;
 }
+/* End Media Queries Screens 1024px */
+
+/* Start Media Queries Screens 768px and 1023px */
+@media screen and (max-width: 1023px) {
+  .login__container {
+    padding: 55px 63px 35px;
+    height: 600px;
+    width: 400px;
+  }
+}
+/* End Media Queries Screens 768px and 1023px */
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 767px) {
+  .login__container {
+    padding: 50px 45px 30px;
+    height: 550px;
+    width: 350px;
+  }
+}
+/* End Media Queries Screens 767px */

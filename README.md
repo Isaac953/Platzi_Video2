@@ -20,7 +20,8 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-05: **Crear el módulo de routing para los componentes del main y ajustes menores de avances realizados**.
 - PT-06: **Agregar contenido y diseño a componente error 404**.
 
-## 05 Login (November 21)
+## 05 Login (November 21, December 6)
 
 - PT-07: **Agregar HTML básico de forma dinámica en Angular**.
 - PT-08: **Integrar diseño CSS de origen al componente**.
+- PT-09: **Crear servicio para controlar tamaño de contenedor principal**.

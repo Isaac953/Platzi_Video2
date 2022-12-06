@@ -5,6 +5,6 @@
   </div>
   <ul class="dropdown-menu">
     <li *ngFor=" let profileNav of profileNavs" [ngClass]="profileNav.class"><a routerLink={{profileNav.url}}
-        class="dropdown-item text-white fw-normal">{{profileNav.option}}</a></li>
+        (click)="clickRoute(profileNav.url)" class="dropdown-item text-white fw-normal">{{profileNav.option}}</a></li>
   </ul>
 </div>
