@@ -1,1 +1,9 @@
-<p>signin works!</p>
+<section class="signin__container d-flex flex-column justify-content-around">
+    <h2 class="fw-bold">{{signinName}}</h2>
+    <form class="d-flex flex-column">
+        <input *ngFor=" let inputValue of inputValues" class="input" type="{{inputValue.type}}"
+        placeholder="{{inputValue.placeholder}}" />
+      <button class="button">{{signinName2}}</button>
+    </form>
+    <div class="signin__container--register d-flex justify-content-center"><a routerLink={{urlLogin}} class="fw-bold">Iniciar sesión</a></div>
+  </section>

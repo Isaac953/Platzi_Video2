@@ -27,3 +27,5 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-09: **Crear servicio para controlar tamaño de contenedor principal**.
 
 ## 06 Sign in (December 7)
+
+- PT-10: **Crear componente de Registro y agregarle estilos finales**.

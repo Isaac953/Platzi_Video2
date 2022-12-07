@@ -9,10 +9,6 @@
   width: 420px;
 }
 
-.login__container--form label {
-  font-size: 14px;
-}
-
 .login__container--remember-me {
   margin-top: 10px;
 }

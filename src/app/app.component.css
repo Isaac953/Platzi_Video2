@@ -19,7 +19,7 @@ main {
 }
 
 .vh-sign-in {
-  height: 100vh;
+  height: 125vh;
 }
 
 .vh-error-404 {
@@ -47,7 +47,7 @@ footer {
   }
 
   .vh-sign-in {
-    height: 100vh;
+    height: 175vh;
   }
 
   .vh-error-404 {
@@ -75,7 +75,7 @@ footer {
   }
 
   .vh-sign-in {
-    height: 100vh;
+    height: 105vh;
   }
 
   .vh-error-404 {

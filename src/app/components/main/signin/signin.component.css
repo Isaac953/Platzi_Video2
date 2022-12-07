@@ -1,0 +1,77 @@
+/* Start Media Queries Screens 1024px */
+.signin__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 60px 68px 40px;
+    height: 630px;
+    width: 420px;
+  }
+
+  .input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+    color: white;
+  }
+  
+  ::placeholder {
+    color: white;
+  }
+
+  .button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Mulish", sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+  }
+
+  .signin__container--register {
+    font-size: 14px;
+  }
+  
+  .signin__container--register a {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .signin__container--register a:hover {
+    text-decoration: underline;
+  }
+  /* End Media Queries Screens 1024px */
+  
+  /* Start Media Queries Screens 768px and 1023px */
+@media screen and (max-width: 1023px) {
+  .signin__container {
+    padding: 55px 63px 35px;
+    height: 560px;
+    width: 400px;
+  }
+}
+/* End Media Queries Screens 768px and 1023px */
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 767px) {
+  .signin__container {
+    padding: 50px 45px 30px;
+    height: 490px;
+    width: 350px;
+  }
+}
+/* End Media Queries Screens 767px */
