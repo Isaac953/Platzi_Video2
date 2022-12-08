@@ -33,3 +33,5 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 ## 07 Maintenance (December 8)
 
 - PT-11: **Crear componente de Mantenimiento y agregar los estilos**.
+
+## 08 Home (December 8)
