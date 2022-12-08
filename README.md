@@ -29,3 +29,5 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 ## 06 Sign in (December 7)
 
 - PT-10: **Crear componente de Registro y agregarle estilos finales**.
+
+## 07 Maintenance (December 8)
