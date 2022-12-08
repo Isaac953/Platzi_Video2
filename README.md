@@ -31,3 +31,5 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-10: **Crear componente de Registro y agregarle estilos finales**.
 
 ## 07 Maintenance (December 8)
+
+- PT-11: **Crear componente de Mantenimiento y agregar los estilos**.
