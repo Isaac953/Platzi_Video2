@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { DropdownComponent } from './components/header/dropdown/dropdown.component';
+import { BrowserComponent } from './components/main/home/browser/browser.component';
+import { CarouselComponent } from './components/main/home/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { DropdownComponent } from './components/header/dropdown/dropdown.compone
     MainComponent,
     DropdownComponent,
     routingComponents,
+    BrowserComponent,
+    CarouselComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
