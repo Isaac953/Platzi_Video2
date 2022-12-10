@@ -1,5 +1,5 @@
+/* Start Media Queries Screens 1024px */
 .browser {
-  /* border-style: solid; */
   width: 88vw;
   height: 300px;
   display: flex;
@@ -7,3 +7,20 @@
   justify-content: center;
   align-items: center;
 }
+/* End Media Queries Screens 1024px */
+
+/* Start Media Queries Screens 768px and 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .browser {
+    width: 92vw;
+  }
+}
+/* End Media Queries Screens 768px and 1023px */
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 767px) {
+  .browser {
+    width: 95vw;
+  }
+}
+/* End Media Queries Screens 767px */
