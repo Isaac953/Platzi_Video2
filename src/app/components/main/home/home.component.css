@@ -7,11 +7,22 @@
   justify-content: center;
   align-items: center;
 }
+
+.carousel {
+  width: 88vw;
+  overflow: auto;
+  padding: 25px;
+  position: relative;
+}
 /* End Media Queries Screens 1024px */
 
 /* Start Media Queries Screens 768px and 1023px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .browser {
+    width: 92vw;
+  }
+
+  .carousel {
     width: 92vw;
   }
 }
@@ -20,6 +31,10 @@
 /* Start Media Queries Screens 767px */
 @media screen and (max-width: 767px) {
   .browser {
+    width: 95vw;
+  }
+
+  .carousel {
     width: 95vw;
   }
 }

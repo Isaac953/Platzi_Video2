@@ -34,6 +34,7 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 
 - PT-11: **Crear componente de Mantenimiento y agregar los estilos**.
 
-## 08 Home (December 8 - )
+## 08 Home (December 8, January 17 - )
 
 - PT-12: **Crear componente de Buscador y agregarle estilos de origen**.
+- PT-13: **Crear componente de Carousel de imagenes incluyendo los estilos de origen de la versión 1**.
