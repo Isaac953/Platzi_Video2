@@ -1,6 +1,6 @@
 <div class="carousel__container">
-  <div class="carousel-item">
-    <img class="carousel-item__img" src="./assets/carousel_movies/one_piece.jpg" alt="One Piece" />
+  <div class="carousel-item" *ngFor=" let carouselItem of carouselItems">
+    <img class="carousel-item__img" src="{{carouselItem.cover}}" alt="One Piece" />
     <div class="carousel-item__details">
       <div>
         <img src="./assets/carousel_movies/play_icon.png" alt="Play" />
