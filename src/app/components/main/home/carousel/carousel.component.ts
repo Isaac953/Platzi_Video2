@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'carousel',
@@ -6,46 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
-  carouselItems: any[] = [
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-    {
-      cover: './assets/carousel_movies/one_piece.jpg',
-      url: '/maintenance',
-    },
-  ];
+  @Input() carouselMovies: any;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 }
