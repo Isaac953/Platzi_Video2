@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   // carouselItems = 'Mi lista';
+  buttonsCarousel: any[] = [
+    {
+      source: './assets/carousel_movies/play_icon.png',
+      alt: 'Play',
+    },
+    {
+      source: './assets/carousel_movies/plus_icon.png',
+      alt: 'Plus',
+    },
+  ];
   carouselItems: any[] = [
     {
       category: 'Mi lista',
@@ -15,19 +25,45 @@ export class HomeComponent implements OnInit {
           cover: './assets/carousel_movies/one_piece.jpg',
           title: 'One Piece',
           description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
         },
         {
           cover: './assets/carousel_movies/naruto.jpg',
           title: 'Naruto Shippuden',
           description: '2007 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
         },
       ],
     },
     {
       category: 'Tendencias',
+      // videos: [
+      //   {
+      //     cover: './assets/carousel_movies/bosque_autos.jpg',
+      //     title: 'Bosque con autos',
+      //     description: '2021 12+ 114 minutos',
+      //   },
+      //   {
+      //     cover: './assets/carousel_movies/hora_celebrar.jpg',
+      //     title: 'Hora de celebrar',
+      //     description: '2021 18+ 150 minutos',
+      //   },
+      // ],
     },
     {
       category: 'Originales de Platzi Video',
+      // videos: [
+      //   {
+      //     cover: './assets/carousel_movies/noche_reflexionar.jpg',
+      //     title: 'Noche para reflexionar',
+      //     description: '2021 12+ 114 minutos',
+      //   },
+      //   {
+      //     cover: './assets/carousel_movies/bello_atardecer.jpg',
+      //     title: 'Bello atardecer',
+      //     description: '2021 18+ 160 minutos',
+      //   },
+      // ],
     },
   ];
 
