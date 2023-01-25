@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'carousel',
@@ -7,6 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
   @Input() carouselMovies: any;
+
+  @ViewChild('carouselMove')
+  carouselMove!: ElementRef;
 
   constructor() {}
 

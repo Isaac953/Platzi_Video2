@@ -20,6 +20,12 @@
   justify-content: flex-start;
   align-items: center;
   overflow-x: scroll;
+  /* overflow-x: scroll; */
+}
+
+.carousel__card::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 .carousel__card--fig {
