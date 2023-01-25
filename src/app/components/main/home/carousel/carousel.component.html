@@ -1,28 +1,20 @@
-<div *ngFor="let carouselMovie of carouselMovies">
-  <h2>{{carouselMovie.category}}</h2>
-  <div *ngFor="let coverL of carouselMovie.videos">
-    <img class="carousel-item__img" src="{{coverL.cover}}" alt="{{coverL.title}}" />
-    <div *ngFor="let detail of coverL.buttons">
-      <img src="{{detail.source}}" alt="{{detail.alt}}" />
-    </div>
-    <p class="carousel-item__details--title">
-      {{coverL.title}}
-    </p>
-    <p class="carousel-item__details--subtitle">{{coverL.description}}</p>
+<div class="carousel__container" *ngFor="let carouselMovie of carouselMovies">
+  <h2 class="carousel__title">{{carouselMovie.category}}</h2>
+  <div class="carousel__card">
+    <figure class="carousel__card--fig" *ngFor="let coverL of carouselMovie.videos">
+      <img class="fig__img" src="{{coverL.cover}}" alt="{{coverL.title}}" />
+      <figcaption class="fig__details">
+        <div class="carousel__card--buttons">
+          <img class="buttons__icon" *ngFor="let detail of coverL.buttons" src="{{detail.source}}"
+            alt="{{detail.alt}}" />
+        </div>
+        <div class="carousel__card--details">
+          <span class="details__title">
+            {{coverL.title}}
+          </span>
+          <span class="details__subtitle">{{coverL.description}}</span>
+        </div>
+      </figcaption>
+    </figure>
   </div>
 </div>
-<!-- <div class="carousel__container">
-  <div class="carousel-item" *ngFor=" let carouselItem of carouselItems">
-    <img class="carousel-item__img" src="{{carouselItem.cover}}" alt="One Piece" />
-    <div class="carousel-item__details">
-      <div>
-        <img src="./assets/carousel_movies/play_icon.png" alt="Play" />
-        <img src="./assets/carousel_movies/plus_icon.png" alt="Plus" />
-      </div>
-      <p class="carousel-item__details--title">
-        One Piece (900+ Episodios)
-      </p>
-      <p class="carousel-item__details--subtitle">1999 12+ 24 minutos</p>
-    </div>
-  </div>
-</div> -->
