@@ -1,9 +1,9 @@
+/* Start Media Queries Screens 1024px */
 .carousel__container {
   display: flex;
   flex-direction: column;
-  /* border-style: solid;
-  border-color: red; */
   width: 100%;
+  overflow: hidden;
 }
 
 .carousel__title {
@@ -13,14 +13,14 @@
 .carousel__card {
   display: flex;
   flex-direction: row;
-  /* border-style: solid;
-  border-color: lightseagreen; */
   width: 100%;
   padding: 70px 0px;
   justify-content: flex-start;
   align-items: center;
-  overflow-x: scroll;
-  /* overflow-x: scroll; */
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel__card::-webkit-scrollbar {
@@ -31,11 +31,8 @@
 .carousel__card--fig {
   margin: 0 10px 0 0px;
   padding: 0px;
-  /* border-style: solid;
-  border-color: green; */
   max-width: 200px;
   border-radius: 20px;
-  /* max-height: 250px; */
   cursor: pointer;
   transition: 450ms all;
   transform-origin: center left;
@@ -69,8 +66,6 @@
 }
 
 .fig__details {
-  /* border-style: solid;
-  border-color: green; */
   position: absolute;
   bottom: 0%;
   padding-left: 10px;
@@ -106,3 +101,52 @@
   display: flex;
   flex-direction: column;
 }
+/* Start Media Queries Screens 1024px */
+
+/* Start Media Queries Screens 1023px */
+@media screen and (max-width: 1023px) {
+  .carousel__card {
+    padding: 67px 0px;
+  }
+
+  .carousel__card--fig {
+    max-width: 180px;
+    border-radius: 18px;
+  }
+
+  .fig__img {
+    width: 180px;
+    height: 230px;
+    border-radius: 18px;
+  }
+
+  .fig__details {
+    min-height: 230px;
+    border-radius: 18px;
+  }
+}
+/* End Media Queries Screens 1023px */
+
+/* Start Media Queries Screens 767px */
+@media screen and (max-width: 767px) {
+  .carousel__card {
+    padding: 64px 0px;
+  }
+
+  .carousel__card--fig {
+    max-width: 160px;
+    border-radius: 16px;
+  }
+
+  .fig__img {
+    width: 160px;
+    height: 210px;
+    border-radius: 16px;
+  }
+
+  .fig__details {
+    min-height: 210px;
+    border-radius: 16px;
+  }
+}
+/* End Media Queries Screens 767px */
