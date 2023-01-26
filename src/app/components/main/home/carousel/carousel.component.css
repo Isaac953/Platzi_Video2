@@ -4,6 +4,7 @@
   flex-direction: column;
   width: 100%;
   overflow: hidden;
+  /* border-style: solid; */
 }
 
 .carousel__title {
@@ -17,15 +18,15 @@
   padding: 70px 0px;
   justify-content: flex-start;
   align-items: center;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  /* border-style: solid; */
 }
 
 .carousel__card::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+  cursor: pointer;
 }
 
 .carousel__card--fig {
@@ -62,6 +63,7 @@
   height: 250px;
   object-fit: cover;
   position: relative;
+  pointer-events: none;
   border-radius: 20px;
 }
 
@@ -131,6 +133,11 @@
 @media screen and (max-width: 767px) {
   .carousel__card {
     padding: 64px 0px;
+  }
+
+  .carousel__card::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
   }
 
   .carousel__card--fig {

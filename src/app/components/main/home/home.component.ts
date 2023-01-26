@@ -39,24 +39,24 @@ export class HomeComponent implements OnInit {
           description: '2004 12+ 24 minutos',
           buttons: this.buttonsCarousel,
         },
-        // {
-        //   cover: './assets/carousel_movies/one_piece.jpg',
-        //   title: 'One Piece',
-        //   description: '1999 12+ 24 minutos',
-        //   buttons: this.buttonsCarousel,
-        // },
-        // {
-        //   cover: './assets/carousel_movies/naruto.jpg',
-        //   title: 'Naruto Shippuden',
-        //   description: '2007 12+ 24 minutos',
-        //   buttons: this.buttonsCarousel,
-        // },
-        // {
-        //   cover: './assets/carousel_movies/one_piece.jpg',
-        //   title: 'One Piece',
-        //   description: '1999 12+ 24 minutos',
-        //   buttons: this.buttonsCarousel,
-        // },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/naruto.jpg',
+          title: 'Naruto Shippuden',
+          description: '2007 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
         // {
         //   cover: './assets/carousel_movies/naruto.jpg',
         //   title: 'Naruto Shippuden',

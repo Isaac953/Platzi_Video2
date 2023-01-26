@@ -39,7 +39,7 @@ footer {
 /* Start Media Queries Screens 1023px */
 @media screen and (max-width: 1023px) {
   .vh-home {
-    height: 270vh;
+    height: 350vh;
   }
 
   .vh-login {
@@ -67,7 +67,7 @@ footer {
 /* Start Media Queries Screens 767px */
 @media screen and (max-width: 767px) {
   .vh-home {
-    height: 270vh;
+    height: 180vh;
   }
 
   .vh-login {

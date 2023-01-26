@@ -22,13 +22,9 @@ export class CarouselComponent implements OnInit {
   @ViewChild('carouselMove')
   carouselMove!: ElementRef;
 
-  @ViewChild('carouselItem')
-  carouselItem!: ElementRef;
-
   /* Start Function onResize */
   onResize = (event: any) => {
     this.slideSize = this.carouselMove.nativeElement.offsetWidth;
-    this.itemSize = this.carouselItem.nativeElement.offsetWidth;
     this.slideMove = this.slideSize * this.clickMove;
     console.log(this.itemSize);
   };
