@@ -39,7 +39,7 @@ footer {
 /* Start Media Queries Screens 1023px */
 @media screen and (max-width: 1023px) {
   .vh-home {
-    height: 350vh;
+    height: 370vh;
   }
 
   .vh-login {

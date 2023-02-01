@@ -1,9 +1,8 @@
 <div class="carousel__container" *ngFor="let carouselMovie of carouselMovies">
   <h2 class="carousel__title">{{carouselMovie.category}}</h2>
-  <!-- <div class="carousel__card" #carouselMove (swipeLeft)="nextSlide(1)" (swipeRight)="backSlide(1)"> -->
-  <div class="carousel__card">
-    <!-- <button>Left</button>
-    <button>Right</button> -->
+  <button class="left" (click)="backSlide(carouselMovie.btn1, carouselMovie.sum, carouselMovie.id)">left</button>
+  <button class="right" (click)="nextSlide(carouselMovie.btn2, carouselMovie.sum, carouselMovie.id)">right</button>
+  <div class="carousel__card" #carouselMove>
     <figure class="carousel__card--fig" #carouselItem *ngFor="let coverL of carouselMovie.videos">
       <img class="fig__img" src="{{coverL.cover}}" alt="{{coverL.title}}" />
       <figcaption class="fig__details">

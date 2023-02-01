@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChildren,
+  ElementRef,
+  QueryList,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'carousel',
@@ -10,77 +18,59 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
   @Input() carouselMovies: any;
-
-  clickSum = 1;
+  slideMove: any;
+  carouselId: any;
+  carouselSize: any;
+  itemSize: any;
+  clickSum = 0;
   clickMove = 0;
 
-  slideMove: any;
-  slidesLength: any;
-  slideSize: any;
-  itemSize: any;
-
-  @ViewChild('carouselMove')
-  carouselMove!: ElementRef;
+  @ViewChildren('carouselMove') carouselMove!: QueryList<ElementRef>;
+  @ViewChild('carouselItem') carouselItem!: ElementRef;
 
   /* Start Function onResize */
   onResize = (event: any) => {
-    this.slideSize = this.carouselMove.nativeElement.offsetWidth;
-    this.slideMove = this.slideSize * this.clickMove;
-    console.log(this.itemSize);
+    for (let i = 0; i < 3; i++) {
+      this.carouselId =
+        this.carouselMove.toArray()[i].nativeElement.offsetWidth;
+    }
+    this.itemSize = this.carouselItem.nativeElement.offsetWidth;
+    console.log(this.itemSize + 10);
   };
   /* End Function onResize */
 
   /* Start Function next move Slide */
-  nextSlide = (nextValue: number) => {
-    setTimeout(() => {
-      this.clickSum = this.clickSum + nextValue;
-      this.clickMove = this.clickMove + nextValue;
-      this.slidesCase();
-    }, 300);
+  nextSlide = (btnid: string, nextValue: number, cell: any) => {
+    this.carouselSize =
+      this.carouselMove.toArray()[cell].nativeElement.offsetWidth;
+    this.itemSize = this.carouselItem.nativeElement.offsetWidth + 10;
+
+    // this.clickSum = this.clickSum + nextValue;
+
+    this.clickSum = this.clickSum + nextValue;
+    this.clickMove = this.clickMove + nextValue;
+
+    this.slideMove = this.itemSize * this.clickMove;
+    this.carouselId = this.carouselMove.toArray()[cell].nativeElement;
+
+    this.carouselId.scrollTo({
+      left: this.slideMove,
+    });
+
+    console.log(this.clickMove);
+    console.log(this.slideMove);
   };
   /* End Function next move Slide*/
 
-  /* Start Function back move Slide */
-  backSlide = (backValue: number) => {
-    setTimeout(() => {
-      this.clickSum = this.clickSum - backValue;
-      this.clickMove = this.clickMove - backValue;
-      this.slidesCase();
-    }, 300);
-  };
-  /* End Function back move Slide */
-
-  /* Start Function dots move Slide */
-  slidesCase = () => {
-    this.limitSum();
-    this.slideMove = this.slideSize * this.clickMove;
-    this.carouselMove.nativeElement.scrollTo({
-      left: this.slideMove,
-    });
-    console.log(this.slideMove);
-  };
-  /* End Function dots move Slide */
-
-  /* Start Function limitSum */
-  limitSum = () => {
-    switch (true) {
-      case this.clickSum > this.slidesLength:
-        this.clickSum = this.slidesLength;
-        this.clickMove = this.slidesLength - 1;
-        break;
-      case this.clickSum === 0:
-        this.clickSum = 1;
-        this.clickMove = 0;
-        break;
-    }
-  };
-  /* End Function limitSum */
+  /* Start Function next move Slide */
+  backSlide = (btnid: string, backValue: number, cell: any) => {};
+  /* End Function next move Slide*/
 
   constructor() {}
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.slideSize = this.carouselMove.nativeElement.offsetWidth;
+    // console.log(this.carouselMove);
   }
 }
