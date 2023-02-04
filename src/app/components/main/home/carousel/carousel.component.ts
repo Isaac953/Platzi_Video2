@@ -18,53 +18,62 @@ import {
 })
 export class CarouselComponent implements OnInit {
   @Input() carouselMovies: any;
-  slideMove: any;
-  carouselId: any;
-  carouselSize: any;
-  itemSize: any;
-  clickSum = 0;
-  clickMove = 0;
 
   @ViewChildren('carouselMove') carouselMove!: QueryList<ElementRef>;
   @ViewChild('carouselItem') carouselItem!: ElementRef;
 
+  slideMove: any;
+  carouselId: any;
+  slideSize: any;
+
   /* Start Function onResize */
-  onResize = (event: any) => {
-    for (let i = 0; i < 3; i++) {
-      this.carouselId =
-        this.carouselMove.toArray()[i].nativeElement.offsetWidth;
-    }
-    this.itemSize = this.carouselItem.nativeElement.offsetWidth;
-    console.log(this.itemSize + 10);
-  };
+  onResize = (event: any) => {};
   /* End Function onResize */
 
   /* Start Function next move Slide */
-  nextSlide = (btnid: string, nextValue: number, cell: any) => {
-    this.carouselSize =
-      this.carouselMove.toArray()[cell].nativeElement.offsetWidth;
-    this.itemSize = this.carouselItem.nativeElement.offsetWidth + 10;
-
-    // this.clickSum = this.clickSum + nextValue;
-
-    this.clickSum = this.clickSum + nextValue;
-    this.clickMove = this.clickMove + nextValue;
-
-    this.slideMove = this.itemSize * this.clickMove;
-    this.carouselId = this.carouselMove.toArray()[cell].nativeElement;
-
-    this.carouselId.scrollTo({
-      left: this.slideMove,
-    });
-
-    console.log(this.clickMove);
-    console.log(this.slideMove);
+  nextSlide = (nextValue: number, id: any) => {
+    setTimeout(() => {
+      this.carouselMovies[id].sum = nextValue + 1;
+      this.slidesCase(nextValue, id);
+    }, 300);
   };
   /* End Function next move Slide*/
 
-  /* Start Function next move Slide */
-  backSlide = (btnid: string, backValue: number, cell: any) => {};
-  /* End Function next move Slide*/
+  /* Start Function back move Slide */
+  backSlide = (backValue: number, id: any) => {
+    setTimeout(() => {
+      this.carouselMovies[id].sum = backValue - 1;
+      this.slidesCase(backValue, id);
+    }, 300);
+  };
+  /* End Function back move Slide*/
+
+  /* Start Function limitSum */
+  limitSum = (clickSum: number, id: any) => {
+    switch (true) {
+      case clickSum >= this.carouselMovies[id].videos.length:
+        clickSum = this.carouselMovies[id].videos.length;
+        console.log(clickSum);
+        break;
+      case clickSum === 1:
+        clickSum = 1;
+        console.log(clickSum);
+        break;
+    }
+  };
+  /* End Function limitSum */
+
+  /* Start Function dots move Slide */
+  slidesCase = (clickSum: number, id: any) => {
+    this.limitSum(clickSum, id);
+    this.slideSize = this.carouselItem.nativeElement.offsetWidth + 10;
+    this.slideMove = this.slideSize * clickSum;
+    this.carouselId = this.carouselMove.toArray()[id].nativeElement;
+    this.carouselId.scrollTo({
+      left: this.slideMove,
+    });
+  };
+  /* End Function dots move Slide */
 
   constructor() {}
 

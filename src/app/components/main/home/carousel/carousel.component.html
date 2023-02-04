@@ -1,20 +1,36 @@
 <div class="carousel__container" *ngFor="let carouselMovie of carouselMovies">
-  <h2 class="carousel__title">{{carouselMovie.category}}</h2>
-  <button class="left" (click)="backSlide(carouselMovie.btn1, carouselMovie.sum, carouselMovie.id)">left</button>
-  <button class="right" (click)="nextSlide(carouselMovie.btn2, carouselMovie.sum, carouselMovie.id)">right</button>
+  <h2 class="carousel__title">{{ carouselMovie.category }}</h2>
+
+  <div>
+    <span>{{carouselMovie.sum}} / {{ carouselMovie.videos.length }}</span>
+  </div>
+  <div>
+    <button class="left" (click)="
+        backSlide(carouselMovie.sum, carouselMovie.id)
+      " *ngIf="carouselMovie.sum > 1">
+      left
+    </button>
+    <button class="right" (click)="
+        nextSlide(carouselMovie.sum, carouselMovie.id)
+      " *ngIf="carouselMovie.sum < carouselMovie.videos.length - 6">
+      right
+    </button>
+  </div>
+
   <div class="carousel__card" #carouselMove>
-    <figure class="carousel__card--fig" #carouselItem *ngFor="let coverL of carouselMovie.videos">
-      <img class="fig__img" src="{{coverL.cover}}" alt="{{coverL.title}}" />
+    <figure class="carousel__card--fig" #carouselItem *ngFor="let coverL of carouselMovie.videos"
+      [ngClass]="coverL.class">
+      <img class="fig__img" src="{{ coverL.cover }}" alt="{{ coverL.title }}" />
       <figcaption class="fig__details">
         <div class="carousel__card--buttons">
-          <img class="buttons__icon" *ngFor="let detail of coverL.buttons" src="{{detail.source}}"
-            alt="{{detail.alt}}" />
+          <img class="buttons__icon" *ngFor="let detail of coverL.buttons" src="{{ detail.source }}"
+            alt="{{ detail.alt }}" />
         </div>
         <div class="carousel__card--details">
           <span class="details__title">
-            {{coverL.title}}
+            {{ coverL.title }}
           </span>
-          <span class="details__subtitle">{{coverL.description}}</span>
+          <span class="details__subtitle">{{ coverL.description }}</span>
         </div>
       </figcaption>
     </figure>

@@ -28,7 +28,7 @@
   padding: 70px 0px;
   justify-content: flex-start;
   align-items: center;
-  overflow-x: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   /* border-style: solid; */
 }
@@ -48,6 +48,10 @@
   transition: 450ms all;
   transform-origin: center left;
   position: relative;
+}
+
+.marginlast{
+  margin: 0px;
 }
 
 .carousel__card--fig:hover ~ .carousel__card--fig {

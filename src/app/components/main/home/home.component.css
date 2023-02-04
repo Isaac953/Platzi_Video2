@@ -9,7 +9,7 @@
 }
 
 .carousel {
-  width: 88vw;
+  width: 1250px;
   overflow: auto;
   position: relative;
   display: flex;
@@ -17,6 +17,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
+  border-style: solid;
   /* flex-wrap: nowrap; */
 }
 /* End Media Queries Screens 1024px */

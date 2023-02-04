@@ -34,10 +34,11 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 
 - PT-11: **Crear componente de Mantenimiento y agregar los estilos**.
 
-## 08 Home (December 8, January 17 - January 25)
+## 08 Home (December 8, January 17 - January 25, February 2)
 
 - PT-12: **Crear componente de Buscador y agregarle estilos de origen**.
 - PT-13: **Crear componente de Carousel de imagenes incluyendo los estilos de origen de la versión 1**.
 - PT-14: **Hacer el carrusel de imagenes de forma dinámica en Angular parte 1**.
 - PT-15: **Enviar valores desde componente padre a hijo en Carousel de imagenes**.
 - PT-16: **Agregar funcionalidad final y estilos definitivos al carousel de imagenes**.
+- PT-17: **Implementar funcionalidad de mover items del carousel**.
