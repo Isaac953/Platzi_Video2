@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+/*Proyects Colors*/
+:root {
+  --numbers-color: rgba(0, 0, 0, 0.8);
+  --arrows-color: rgba(255, 83, 3, 0.8);
+  --arrows-color2: rgba(5, 128, 210, 0.8);
+}
