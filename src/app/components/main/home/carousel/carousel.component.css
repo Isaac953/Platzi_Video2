@@ -169,6 +169,29 @@
   display: flex;
   flex-direction: column;
 }
+
+.dot-col{
+  padding: 5px 0px;
+}
+
+.carousel-dot{
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+
+  cursor: pointer;
+
+  border-style: none;
+  border-radius: 50%;
+  background-color: var(--dots-color);
+}
+
+/*Start Dinamic Class*/
+.active-dot {
+  background-color: var(--dots-color2);
+}
+/*End Dinamic Class*/
+
 /* End Media Queries Screens 1024px */
 
 /* Start Media Queries Screens 1023px */
@@ -191,6 +214,11 @@
   .fig__details {
     min-height: 230px;
     border-radius: 18px;
+  }
+
+  .carousel-dot {
+    width: 16px;
+    height: 16px;
   }
 }
 /* End Media Queries Screens 1023px */
@@ -220,6 +248,11 @@
   .fig__details {
     min-height: 210px;
     border-radius: 16px;
+  }
+
+  .carousel-dot {
+    width: 14px;
+    height: 14px;
   }
 }
 /* End Media Queries Screens 767px */

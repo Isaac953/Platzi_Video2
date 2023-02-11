@@ -24,61 +24,83 @@ export class HomeComponent implements OnInit {
       btn2: 'R1',
       id: 0,
       sum: 0,
+      numberSlide: 1,
       videos: [
         {
           cover: './assets/carousel_movies/one_piece.jpg',
           title: 'One Piece (+1000 episodios)',
           description: '1999 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
           class: 'marginstart',
         },
         {
           cover: './assets/carousel_movies/naruto.jpg',
           title: 'Naruto Shippuden (700 episodios)',
           description: '2007 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
         },
         {
           cover: './assets/carousel_movies/bleach.jpg',
           title: 'Bleach (600 episodios)',
           description: '2004 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
         },
         {
           cover: './assets/carousel_movies/one_piece.jpg',
           title: 'One Piece',
           description: '1999 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
         },
         {
           cover: './assets/carousel_movies/naruto.jpg',
           title: 'Naruto Shippuden',
           description: '2007 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
         },
         {
           cover: './assets/carousel_movies/one_piece.jpg',
           title: 'One Piece',
           description: '1999 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
         },
         {
           cover: './assets/carousel_movies/naruto.jpg',
           title: 'Naruto Shippuden',
           description: '2007 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
         },
         {
           cover: './assets/carousel_movies/one_piece.jpg',
           title: 'One Piece',
           description: '1999 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
         },
         {
           cover: './assets/carousel_movies/naruto.jpg',
           title: 'Naruto Shippuden',
           description: '2007 12+ 24 minutos',
-          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+        },
+        {
+          cover: './assets/carousel_movies/naruto.jpg',
+          title: 'Naruto Shippuden',
+          description: '2007 12+ 24 minutos',
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+        },
+        {
+          cover: './assets/carousel_movies/naruto.jpg',
+          title: 'Naruto Shippuden',
+          description: '2007 12+ 24 minutos',
           class: 'marginlast',
         },
       ],
@@ -88,7 +110,8 @@ export class HomeComponent implements OnInit {
     //   btn1: 'L2',
     //   btn2: 'R2',
     //   id: 1,
-    //   sum: 1,
+    //   sum: 0,
+    //   numberSlide: 1,
     //   videos: [
     //     {
     //       cover: './assets/carousel_movies/bosque_autos.jpg',
@@ -146,7 +169,8 @@ export class HomeComponent implements OnInit {
     //   btn1: 'L3',
     //   btn2: 'R3',
     //   id: 2,
-    //   sum: 1,
+    //   sum: 0,
+    //   numberSlide: 1,
     //   videos: [
     //     {
     //       cover: './assets/carousel_movies/noche_reflexionar.jpg',
