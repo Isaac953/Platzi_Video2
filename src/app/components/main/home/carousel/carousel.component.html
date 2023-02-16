@@ -17,8 +17,11 @@
         <fa-icon [icon]="faAngleLeft"></fa-icon>
       </button>
     </div>
-    <div class="col carousel-col" #carouselMove>
-      <div class="carousel__card">
+    <div class="col carousel-col" #carouselMove [ngStyle]="{'min-width': sizeCard + 'px'}">
+      <div class="carousel__card" [ngStyle]="{'min-width': sizeCard * carouselMovie.numberSlide + 'px'}">
+        <!-- <p style="color: white; font-weight: bold;">{{sizeCard}} </p>
+
+        <p style="color: white; font-weight: bold;">{{sizeDisplay}} </p> -->
         <figure
           class="carousel__card--fig"
           #carouselItem
@@ -53,13 +56,13 @@
       <button
         class="carousel__arrow"
         (click)="nextSlide(1, carouselMovie.id)"
-        *ngIf="carouselMovie.sum + 1 < carouselMovie.videos.length"
+        *ngIf="carouselMovie.sum + 1 < carouselMovie.numberSlide"
       >
         <fa-icon [icon]="faAngleRight"></fa-icon>
       </button>
     </div>
     <div class="col-12 dot-col d-flex justify-content-center">
-      <button class="carousel-dot" *ngFor="let number of numbers" (click)="buttonSlide(number, carouselMovie.id)"></button>
+      <button class="carousel-dot" #carouselDot></button>
     </div>
   </div>
 </div>

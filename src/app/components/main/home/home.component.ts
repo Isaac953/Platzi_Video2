@@ -20,17 +20,14 @@ export class HomeComponent implements OnInit {
   carouselItems: any[] = [
     {
       category: 'Mi lista',
-      btn1: 'L1',
-      btn2: 'R1',
-      id: 0,
       sum: 0,
-      numberSlide: 1,
+      numberSlide: 0,
+      id: 0,
       videos: [
         {
           cover: './assets/carousel_movies/one_piece.jpg',
           title: 'One Piece (+1000 episodios)',
           description: '1999 12+ 24 minutos',
-          class: 'marginstart',
         },
         {
           cover: './assets/carousel_movies/naruto.jpg',
@@ -101,15 +98,11 @@ export class HomeComponent implements OnInit {
           cover: './assets/carousel_movies/naruto.jpg',
           title: 'Naruto Shippuden',
           description: '2007 12+ 24 minutos',
-          class: 'marginlast',
         },
       ],
     },
     // {
     //   category: 'Tendencias',
-    //   btn1: 'L2',
-    //   btn2: 'R2',
-    //   id: 1,
     //   sum: 0,
     //   numberSlide: 1,
     //   videos: [
@@ -166,9 +159,6 @@ export class HomeComponent implements OnInit {
     // },
     // {
     //   category: 'Originales de Platzi Video',
-    //   btn1: 'L3',
-    //   btn2: 'R3',
-    //   id: 2,
     //   sum: 0,
     //   numberSlide: 1,
     //   videos: [
