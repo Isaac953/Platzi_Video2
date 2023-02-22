@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit {
       sum: 0,
       numberSlide: 0,
       id: 0,
+      buttons: [
+        {dot: 1, activeDot: 'active-dot'}
+      ],
       videos: [
         {
           cover: './assets/carousel_movies/one_piece.jpg',
@@ -101,100 +104,108 @@ export class HomeComponent implements OnInit {
         },
       ],
     },
-    // {
-    //   category: 'Tendencias',
-    //   sum: 0,
-    //   numberSlide: 1,
-    //   videos: [
-    //     {
-    //       cover: './assets/carousel_movies/bosque_autos.jpg',
-    //       title: 'Bosque con autos',
-    //       description: '2021 12+ 114 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/hora_celebrar.jpg',
-    //       title: 'Hora de celebrar',
-    //       description: '2021 18+ 150 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/one_piece.jpg',
-    //       title: 'One Piece',
-    //       description: '1999 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/naruto.jpg',
-    //       title: 'Naruto Shippuden',
-    //       description: '2007 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/one_piece.jpg',
-    //       title: 'One Piece',
-    //       description: '1999 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/one_piece.jpg',
-    //       title: 'One Piece',
-    //       description: '1999 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/naruto.jpg',
-    //       title: 'Naruto Shippuden',
-    //       description: '2007 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/one_piece.jpg',
-    //       title: 'One Piece',
-    //       description: '1999 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //       class: 'marginlast',
-    //     },
-    //   ],
-    // },
-    // {
-    //   category: 'Originales de Platzi Video',
-    //   sum: 0,
-    //   numberSlide: 1,
-    //   videos: [
-    //     {
-    //       cover: './assets/carousel_movies/noche_reflexionar.jpg',
-    //       title: 'Noche para reflexionar',
-    //       description: '2021 12+ 114 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/bello_atardecer.jpg',
-    //       title: 'Bello atardecer',
-    //       description: '2021 18+ 160 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/one_piece.jpg',
-    //       title: 'One Piece',
-    //       description: '1999 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/naruto.jpg',
-    //       title: 'Naruto Shippuden',
-    //       description: '2007 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //     },
-    //     {
-    //       cover: './assets/carousel_movies/one_piece.jpg',
-    //       title: 'One Piece',
-    //       description: '1999 12+ 24 minutos',
-    //       buttons: this.buttonsCarousel,
-    //       class: 'marginlast',
-    //     },
-    //   ],
-    // },
+    {
+      category: 'Tendencias',
+      sum: 0,
+      numberSlide: 1,
+      id: 1,
+      buttons: [
+        {dot: 1, activeDot: 'active-dot'}
+      ],
+      videos: [
+        {
+          cover: './assets/carousel_movies/bosque_autos.jpg',
+          title: 'Bosque con autos',
+          description: '2021 12+ 114 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/hora_celebrar.jpg',
+          title: 'Hora de celebrar',
+          description: '2021 18+ 150 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/naruto.jpg',
+          title: 'Naruto Shippuden',
+          description: '2007 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/naruto.jpg',
+          title: 'Naruto Shippuden',
+          description: '2007 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+          class: 'marginlast',
+        },
+      ],
+    },
+    {
+      category: 'Originales de Platzi Video',
+      sum: 0,
+      numberSlide: 1,
+      id: 2,
+      buttons: [
+        {dot: 1, activeDot: 'active-dot'}
+      ],
+      videos: [
+        {
+          cover: './assets/carousel_movies/noche_reflexionar.jpg',
+          title: 'Noche para reflexionar',
+          description: '2021 12+ 114 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/bello_atardecer.jpg',
+          title: 'Bello atardecer',
+          description: '2021 18+ 160 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/naruto.jpg',
+          title: 'Naruto Shippuden',
+          description: '2007 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+        },
+        {
+          cover: './assets/carousel_movies/one_piece.jpg',
+          title: 'One Piece',
+          description: '1999 12+ 24 minutos',
+          buttons: this.buttonsCarousel,
+          class: 'marginlast',
+        },
+      ],
+    },
   ];
 
   constructor() {}

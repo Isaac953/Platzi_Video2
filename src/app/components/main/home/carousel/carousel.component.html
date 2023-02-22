@@ -62,7 +62,7 @@
       </button>
     </div>
     <div class="col-12 dot-col d-flex justify-content-center">
-      <button class="carousel-dot" #carouselDot></button>
+      <button class="carousel-dot" #carouselDot *ngFor="let dots of carouselMovie.buttons" [ngClass]="dots.activeDot" (click)="buttonSlide(dots.dot, carouselMovie.id)"></button>
     </div>
   </div>
 </div>
