@@ -44,3 +44,4 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-17: **Implementar funcionalidad de mover items del carousel**.
 - PT-18: **Rework a funciones de mover items del carousel**.
 - PT-19: **Agregar los puntos para mover items del carousel**.
+- PT-20: **Completar funcionalidad del carousel en un 90%**.

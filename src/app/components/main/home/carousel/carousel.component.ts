@@ -38,6 +38,10 @@ export class CarouselComponent implements OnInit {
   /* Start Function onResize */
   onResize = (event: any) => {
     this.displayCases();
+    for (let i = 0; i < this.carouselMove.length; i++) {
+      this.carouselMovies[i].sum = 0;
+    }
+
     setTimeout(() => {
       this.clearDots();
       this.numberDots();
@@ -47,7 +51,7 @@ export class CarouselComponent implements OnInit {
 
   /* Start Function next move Slide */
   nextSlide = (nextValue: number, id: any) => {
-
+    setTimeout(() => {
       this.carouselMovies[id].sum = this.carouselMovies[id].sum + nextValue;
       this.carouselId = this.carouselMove.toArray()[id].nativeElement;
       this.slideMove = this.sizeCard * this.carouselMovies[id].sum;
@@ -62,6 +66,7 @@ export class CarouselComponent implements OnInit {
       }
       this.carouselMovies[id].buttons[this.carouselMovies[id].sum].activeDot =
         'active-dot';
+    }, 500);
     };
   /* End Function next move Slide*/
 
@@ -72,7 +77,7 @@ export class CarouselComponent implements OnInit {
       this.carouselId = this.carouselMove.toArray()[id].nativeElement;
       this.slideMove = this.sizeCard * this.carouselMovies[id].sum;
       this.carouselId.scrollTo({
-        left: this.slideMove,
+        left: this.slideMove
       });
       for (let j = 0; j < this.carouselMovies[id].buttons.length; j++) {
         this.carouselMovies[id].buttons[j].activeDot =
@@ -81,16 +86,16 @@ export class CarouselComponent implements OnInit {
       }
       this.carouselMovies[id].buttons[this.carouselMovies[id].sum].activeDot =
         'active-dot';
-    }, 300);
+    }, 500);
   };
   /* End Function back move Slide*/
 
   /* Start Function dots move Slide */
   buttonSlide = (buttonValue: number, id: any) => {
     setTimeout(() => {
-      this.carouselMovies[id].sum = buttonValue - 1;
+      this.carouselMovies[id].sum = buttonValue;
       this.carouselId = this.carouselMove.toArray()[id].nativeElement;
-      this.slideMove = this.sizeCard * (buttonValue - 1);
+      this.slideMove = this.sizeCard * (buttonValue);
       this.carouselId.scrollTo({
         left: this.slideMove,
       });
@@ -100,7 +105,7 @@ export class CarouselComponent implements OnInit {
       '';
 
     }
-    this.carouselMovies[id].buttons[buttonValue-1].activeDot =
+    this.carouselMovies[id].buttons[buttonValue].activeDot =
       'active-dot';
   };
   /* End Function dots move Slide */
@@ -163,10 +168,14 @@ export class CarouselComponent implements OnInit {
       for (let i = 0; i < this.carouselMove.length; i++) {
         // console.log(this.carouselMovies[i].numberSlide);
 
-        for (let j = 2; j <= this.carouselMovies[i].numberSlide; j++) {
+        for (let j = 0; j < this.carouselMovies[i].numberSlide; j++) {
           this.carouselMovies[i].buttons.push({ dot: j, activeDot: '' });
           // console.log(this.carouselMovies[i].buttons);
         }
+        this.carouselMovies[i].buttons[this.carouselMovies[i].sum].dot =
+        0;
+        this.carouselMovies[i].buttons[this.carouselMovies[i].sum].activeDot =
+        'active-dot';
         // console.log(this.carouselMovies[i].buttons);
       }
     }, 300);
@@ -183,10 +192,10 @@ export class CarouselComponent implements OnInit {
           this.carouselMovies[i].buttons.pop({ dot: j, activeDot: '' });
           // console.log(this.carouselMovies[i].buttons);
         }
-        this.carouselMovies[i].buttons.push({
-          dot: 1,
-          activeDot: 'active-dot',
-        });
+        // this.carouselMovies[i].buttons.push({
+        //   dot: 1,
+        //   activeDot: 'active-dot',
+        // });
         // console.log(this.carouselMovies[i].buttons);
       }
     }, 300);

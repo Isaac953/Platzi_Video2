@@ -1,5 +1,5 @@
 <div class="container-fluid" *ngFor="let carouselMovie of carouselMovies">
-  <div class="row">
+  <div class="row marginb">
     <div class="col-6 title-col d-flex justify-content-start">
       <h2 class="carousel__title">{{ carouselMovie.category }}</h2>
     </div>
@@ -8,11 +8,14 @@
         >{{ carouselMovie.sum + 1 }}/{{ carouselMovie.numberSlide }}</span
       >
     </div>
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <hr class="line">
+    </div>
     <div class="col arrow-col">
       <button
         class="carousel__arrow"
         (click)="backSlide(1, carouselMovie.id)"
-        *ngIf="carouselMovie.sum + 1 > 1"
+        [disabled]="carouselMovie.sum + 1 <= 1"
       >
         <fa-icon [icon]="faAngleLeft"></fa-icon>
       </button>
@@ -55,8 +58,7 @@
     <div class="col arrow-col">
       <button
         class="carousel__arrow"
-        (click)="nextSlide(1, carouselMovie.id)"
-        *ngIf="carouselMovie.sum + 1 < carouselMovie.numberSlide"
+        (click)="nextSlide(1, carouselMovie.id)" [disabled]="carouselMovie.sum + 1 >= carouselMovie.numberSlide"
       >
         <fa-icon [icon]="faAngleRight"></fa-icon>
       </button>

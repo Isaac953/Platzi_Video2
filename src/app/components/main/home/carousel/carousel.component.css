@@ -1,14 +1,20 @@
 /* Start Media Queries Screens 1024px */
-.col-12, .col-6, .col{
-  border-style: solid;
+.col-12,
+.col-6,
+.col {
+  /* border-style: solid; */
   padding: 0px;
 }
 
-.title-col{
+.marginb{
+  margin-bottom: 12px;
+}
+
+.title-col {
   padding-left: 5%;
 }
 
-.numbers-col{
+.numbers-col {
   padding-right: 5%;
 }
 
@@ -16,14 +22,18 @@
   font-size: 20px;
 }
 
+.line{
+  border-style: solid;
+  color: white;
+  width: 90%;
+}
+
 .carousel__numbers {
-  font-size: 16px;
-  font-weight: bold;
+  display: flex;
 
   position: absolute;
-
-
-  display: flex;
+  font-size: 16px;
+  font-weight: bold;
 
   width: 50px;
   height: 35px;
@@ -36,18 +46,17 @@
   justify-content: center;
 }
 
-.arrow-col{
-  max-width: 5%;
+.arrow-col {
   display: flex;
+  max-width: 5%;
   justify-content: center;
   align-items: center;
 }
 
-.carousel__arrow{
+.carousel__arrow {
+  display: flex;
   font-size: 22px;
   font-weight: bold;
-
-  display: flex;
 
   width: 35px;
   height: 40px;
@@ -64,14 +73,22 @@
   justify-content: center;
 }
 
+.carousel__arrow:disabled,
+.carousel__arrow:hover:disabled {
+  background-color: gray;
+}
+
 .carousel__arrow:hover {
   background-color: var(--arrows-color2);
 }
 
-.carousel-col{
- border-style: solid;
- /* color: red; */
- overflow-x: scroll;
+.carousel-col {
+  /* border-style: solid; */
+  /* color: red; */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 
 .carousel__card {
@@ -87,6 +104,7 @@
 }
 
 .carousel__card--fig {
+  position: relative;
   margin: 0px 7.5px;
   padding: 0px;
   max-width: 200px;
@@ -94,7 +112,6 @@
   cursor: pointer;
   transition: 450ms all;
   transform-origin: center left;
-  position: relative;
 }
 
 /* .marginstart{
@@ -120,15 +137,16 @@
 }
 
 .fig__img {
+  position: relative;
   width: 200px;
   height: 250px;
   object-fit: cover;
-  position: relative;
   pointer-events: none;
   border-radius: 20px;
 }
 
 .fig__details {
+  display: flex;
   position: absolute;
   bottom: 0%;
   padding-left: 10px;
@@ -142,7 +160,6 @@
   font-size: 10px;
   font-weight: 700;
   transition: 450 ms opacity;
-  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
@@ -165,11 +182,11 @@
   flex-direction: column;
 }
 
-.dot-col{
+.dot-col {
   padding: 5px 0px;
 }
 
-.carousel-dot{
+.carousel-dot {
   width: 18px;
   height: 18px;
   margin: 0 5px;
@@ -198,6 +215,14 @@
   .carousel__card--fig {
     max-width: 157px;
     border-radius: 18px;
+  }
+
+  .carousel__numbers {
+    width: 45px;
+    height: 30px;
+
+    font-size: 14px;
+    border-radius: 8px;
   }
 
   .fig__img {
@@ -233,6 +258,17 @@
     max-width: 110px;
     border-radius: 16px;
   }
+
+
+  .carousel__numbers {
+    width: 40px;
+    height: 25px;
+
+    font-size: 12px;
+
+    border-radius: 6px;
+  }
+
 
   .fig__img {
     width: 110px;

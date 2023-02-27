@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       numberSlide: 0,
       id: 0,
       buttons: [
-        {dot: 1, activeDot: 'active-dot'}
+        // {dot: 1, activeDot: 'active-dot'}
       ],
       videos: [
         {
@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
       numberSlide: 1,
       id: 1,
       buttons: [
-        {dot: 1, activeDot: 'active-dot'}
+        // {dot: 1, activeDot: 'active-dot'}
       ],
       videos: [
         {
@@ -170,7 +170,7 @@ export class HomeComponent implements OnInit {
       numberSlide: 1,
       id: 2,
       buttons: [
-        {dot: 1, activeDot: 'active-dot'}
+        // {dot: 1, activeDot: 'active-dot'}
       ],
       videos: [
         {

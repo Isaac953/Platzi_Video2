@@ -1,18 +1,18 @@
 /* Start Media Queries Screens 1024px */
 .browser {
+  display: flex;
   width: 88vw;
   height: 300px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .carousel {
+  display: flex;
+  position: relative;
   width: 88vw;
   overflow: auto;
-  position: relative;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
