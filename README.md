@@ -46,3 +46,4 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-19: **Agregar los puntos para mover items del carousel**.
 - PT-20: **Completar funcionalidad del carousel en un 90%**.
 - PT-21: **Avance en un 95% del carousel de videos**.
+- PT-22: **Reorganización de código HTML y CSS del componente carousel**.

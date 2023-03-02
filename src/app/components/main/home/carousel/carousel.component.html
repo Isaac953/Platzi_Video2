@@ -1,47 +1,44 @@
+<!--Start Carousel Component-->
 <div class="container-fluid" *ngFor="let carouselMovie of carouselMovies">
-  <div class="row marginb">
-    <div class="col-6 title-col d-flex justify-content-start">
+  <div class="row m-bottom">
+    <div class="col-6 d-flex justify-content-start col-title">
       <h2 class="carousel__title">{{ carouselMovie.category }}</h2>
     </div>
-    <div class="col-6 numbers-col d-flex justify-content-end">
-      <span class="carousel__numbers"
-        >{{ carouselMovie.sum + 1 }}/{{ carouselMovie.numberSlide }}</span
-      >
+
+    <!--Start Number Slides-->
+    <div class="col-6 d-flex justify-content-end col-numbers">
+      <span class="carousel__numbers">{{ carouselMovie.sum + 1 }}/{{ carouselMovie.numberSlide }}</span>
     </div>
+    <!--End Number Slides-->
+
     <div class="col-12 d-flex justify-content-center align-items-center">
-      <hr class="line">
+      <hr class="line" />
     </div>
-    <div class="col arrow-col">
-      <button
-        class="carousel__arrow"
-        (click)="backSlide(1, carouselMovie.id)"
-        [disabled]="carouselMovie.sum + 1 <= 1"
-      >
+
+    <!--Start left arrow-->
+    <div class="col d-flex justify-content-center align-items-center col-arrow">
+      <button class="d-flex justify-content-center align-items-center carousel__arrow" (click)="backSlide(1, carouselMovie.id)" [disabled]="carouselMovie.sum + 1 <= 1">
         <fa-icon [icon]="faAngleLeft"></fa-icon>
       </button>
     </div>
-    <div class="col carousel-col" #carouselMove [ngStyle]="{'min-width': sizeCard + 'px'}">
-      <div class="carousel__card" [ngStyle]="{'min-width': sizeCard * carouselMovie.numberSlide + 'px'}">
-        <figure
-          class="carousel__card--fig"
-          #carouselItem
-          *ngFor="let coverL of carouselMovie.videos"
-          [ngClass]="coverL.class"
-        >
-          <img
-            class="fig__img"
-            src="{{ coverL.cover }}"
-            alt="{{ coverL.title }}"
-          />
+    <!--End left arrow-->
+
+    <!--Start carousel-->
+    <div class="col col-carousel" #carouselMove [ngStyle]="{ 'min-width': sizeCard + 'px' }">
+      <div class="carousel__card" [ngStyle]="{ 'min-width': sizeCard * carouselMovie.numberSlide + 'px' }">
+        <!--Start carousel item-->
+
+        <figure class="carousel__card--fig" #carouselItem *ngFor="let coverL of carouselMovie.videos"
+          [ngClass]="coverL.class">
+          <!--Start img item and buttons-->
+          <img class="fig__img" src="{{ coverL.cover }}" alt="{{ coverL.title }}" />
+
           <figcaption class="fig__details">
             <div class="carousel__card--buttons">
-              <img
-                class="buttons__icon"
-                *ngFor="let detail of coverL.buttons"
-                src="{{ detail.source }}"
-                alt="{{ detail.alt }}"
-              />
+              <img class="buttons__icon" *ngFor="let detail of coverL.buttons" src="{{ detail.source }}"
+                alt="{{ detail.alt }}" />
             </div>
+            <!--End img item and buttons-->
             <div class="carousel__card--details">
               <span class="details__title">
                 {{ coverL.title }}
@@ -50,18 +47,26 @@
             </div>
           </figcaption>
         </figure>
+        <!--End carousel item-->
       </div>
     </div>
-    <div class="col arrow-col">
-      <button
-        class="carousel__arrow"
-        (click)="nextSlide(1, carouselMovie.id)" [disabled]="carouselMovie.sum + 1 >= carouselMovie.numberSlide"
-      >
+    <!--End carousel-->
+
+    <!--Start right arrow-->
+    <div class="col d-flex justify-content-center align-items-center col-arrow">
+      <button class="carousel__arrow" (click)="nextSlide(1, carouselMovie.id)"
+        [disabled]="carouselMovie.sum + 1 >= carouselMovie.numberSlide">
         <fa-icon [icon]="faAngleRight"></fa-icon>
       </button>
     </div>
-    <div class="col-12 dot-col d-flex justify-content-center">
-      <button class="carousel-dot" #carouselDot *ngFor="let dots of carouselMovie.buttons" [ngClass]="dots.activeDot" (click)="buttonSlide(dots.dot, carouselMovie.id)"></button>
+    <!--End right arrow-->
+
+    <!--Start dots carousel-->
+    <div class="col-12 d-flex justify-content-center col-dot">
+      <button class="carousel__dot" #carouselDot *ngFor="let dots of carouselMovie.buttons" [ngClass]="dots.activeDot"
+        (click)="buttonSlide(dots.dot, carouselMovie.id)"></button>
     </div>
+    <!--End dots carousel-->
   </div>
 </div>
+<!--End Carousel Component-->
