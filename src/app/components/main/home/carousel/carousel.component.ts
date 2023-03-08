@@ -18,29 +18,33 @@ import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
   },
 })
 export class CarouselComponent implements OnInit {
+  /* Start Variables of Carousel Component */
   @Input() carouselMovies: any;
 
   faAngleRight = faAngleRight;
   faAngleLeft = faAngleLeft;
   sizeDisplay = window.innerWidth;
   sizeCard: any;
-
-  @ViewChild('carouselItem') carouselItem!: ElementRef;
-  @ViewChildren('carouselMove') carouselMove!: QueryList<ElementRef>;
   itemSize: any;
   numberItems: any;
   moves: any;
   carouselId: any;
   slideMove: any;
 
-  // buttonsDots: any[] = [{ dot: 1, activeDot: 'active-dot' }];
+  @ViewChild('carouselItem') carouselItem!: ElementRef;
+  @ViewChildren('carouselMove') carouselMove!: QueryList<ElementRef>;
+  /* End Variables of Carousel Component */
 
   /* Start Function onResize */
   onResize = (event: any) => {
-    this.displayCases();
     for (let i = 0; i < this.carouselMove.length; i++) {
       this.carouselMovies[i].sum = 0;
+      this.carouselMove.toArray()[i].nativeElement.scrollTo({
+        left: '0px',
+      });
     }
+
+    this.displayCases();
 
     setTimeout(() => {
       this.clearDots();
@@ -53,39 +57,18 @@ export class CarouselComponent implements OnInit {
   nextSlide = (nextValue: number, id: any) => {
     setTimeout(() => {
       this.carouselMovies[id].sum = this.carouselMovies[id].sum + nextValue;
-      this.carouselId = this.carouselMove.toArray()[id].nativeElement;
-      this.slideMove = this.sizeCard * this.carouselMovies[id].sum;
-      this.carouselId.scrollTo({
-        left: this.slideMove,
-      });
-
-      for (let j = 0; j < this.carouselMovies[id].buttons.length; j++) {
-        this.carouselMovies[id].buttons[j].activeDot =
-        '';
-
-      }
-      this.carouselMovies[id].buttons[this.carouselMovies[id].sum].activeDot =
-        'active-dot';
+      this.limitSum(id);
+      this.slidesCase(id);
     }, 500);
-    };
+  };
   /* End Function next move Slide*/
 
   /* Start Function back move Slide */
   backSlide = (backValue: number, id: any) => {
     setTimeout(() => {
       this.carouselMovies[id].sum = this.carouselMovies[id].sum - backValue;
-      this.carouselId = this.carouselMove.toArray()[id].nativeElement;
-      this.slideMove = this.sizeCard * this.carouselMovies[id].sum;
-      this.carouselId.scrollTo({
-        left: this.slideMove
-      });
-      for (let j = 0; j < this.carouselMovies[id].buttons.length; j++) {
-        this.carouselMovies[id].buttons[j].activeDot =
-        '';
-
-      }
-      this.carouselMovies[id].buttons[this.carouselMovies[id].sum].activeDot =
-        'active-dot';
+      this.limitSum(id);
+      this.slidesCase(id);
     }, 500);
   };
   /* End Function back move Slide*/
@@ -94,21 +77,40 @@ export class CarouselComponent implements OnInit {
   buttonSlide = (buttonValue: number, id: any) => {
     setTimeout(() => {
       this.carouselMovies[id].sum = buttonValue;
-      this.carouselId = this.carouselMove.toArray()[id].nativeElement;
-      this.slideMove = this.sizeCard * (buttonValue);
-      this.carouselId.scrollTo({
-        left: this.slideMove,
-      });
+      this.limitSum(id);
+      this.slidesCase(id);
     }, 300);
-    for (let j = 0; j < this.carouselMovies[id].buttons.length; j++) {
-      this.carouselMovies[id].buttons[j].activeDot =
-      '';
-
-    }
-    this.carouselMovies[id].buttons[buttonValue].activeDot =
-      'active-dot';
   };
   /* End Function dots move Slide */
+
+  /* Start Function slidesCase */
+  slidesCase = (id: any) => {
+    this.carouselId = this.carouselMove.toArray()[id].nativeElement;
+    this.slideMove = this.sizeCard * this.carouselMovies[id].sum;
+    this.carouselId.scrollTo({
+      left: this.slideMove,
+    });
+
+    for (let j = 0; j < this.carouselMovies[id].buttons.length; j++) {
+      this.carouselMovies[id].buttons[j].activeDot = '';
+    }
+    this.carouselMovies[id].buttons[this.carouselMovies[id].sum].activeDot =
+      'active-dot';
+  };
+  /* End Function slidesCase */
+
+  /* Start Function limitSum */
+  limitSum = (id: any) => {
+    switch (true) {
+      case this.carouselMovies[id].sum >= this.carouselMovies[id].numberSlide:
+        this.carouselMovies[id].sum = this.carouselMovies[id].sum - 1;
+        break;
+      case this.carouselMovies[id].sum === 0 || this.carouselMovies[id].sum < 0:
+        this.carouselMovies[id].sum = 0;
+        break;
+    }
+  };
+  /* End Function limitSum */
 
   /* Start Function displayCases */
   displayCases = () => {
@@ -166,17 +168,12 @@ export class CarouselComponent implements OnInit {
   numberDots = () => {
     setTimeout(() => {
       for (let i = 0; i < this.carouselMove.length; i++) {
-        // console.log(this.carouselMovies[i].numberSlide);
-
         for (let j = 0; j < this.carouselMovies[i].numberSlide; j++) {
           this.carouselMovies[i].buttons.push({ dot: j, activeDot: '' });
-          // console.log(this.carouselMovies[i].buttons);
         }
-        this.carouselMovies[i].buttons[this.carouselMovies[i].sum].dot =
-        0;
+        this.carouselMovies[i].buttons[this.carouselMovies[i].sum].dot = 0;
         this.carouselMovies[i].buttons[this.carouselMovies[i].sum].activeDot =
-        'active-dot';
-        // console.log(this.carouselMovies[i].buttons);
+          'active-dot';
       }
     }, 300);
   };
@@ -186,17 +183,9 @@ export class CarouselComponent implements OnInit {
   clearDots = () => {
     setTimeout(() => {
       for (let i = 0; i < this.carouselMove.length; i++) {
-        console.log(this.carouselMovies[i].numberSlide);
-
         for (let j = 0; j <= this.carouselMovies[i].numberSlide; j++) {
           this.carouselMovies[i].buttons.pop({ dot: j, activeDot: '' });
-          // console.log(this.carouselMovies[i].buttons);
         }
-        // this.carouselMovies[i].buttons.push({
-        //   dot: 1,
-        //   activeDot: 'active-dot',
-        // });
-        // console.log(this.carouselMovies[i].buttons);
       }
     }, 300);
   };
@@ -206,12 +195,12 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit() {
     this.displayCases();
-    // this.itemSize = this.carouselItem.nativeElement.offsetWidth + 15;
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       this.numberDots();
+      this.displayCases();
     }, 300);
   }
 }

@@ -122,7 +122,7 @@ export class HomeComponent implements OnInit {
     {
       category: 'Tendencias',
       sum: 0,
-      numberSlide: 1,
+      numberSlide: 0,
       id: 1,
       buttons: [
         // {dot: 1, activeDot: 'active-dot'}
@@ -145,7 +145,7 @@ export class HomeComponent implements OnInit {
     {
       category: 'Originales de Platzi Video',
       sum: 0,
-      numberSlide: 1,
+      numberSlide: 0,
       id: 2,
       buttons: [
         // {dot: 1, activeDot: 'active-dot'}
