@@ -34,7 +34,7 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 
 - PT-11: **Crear componente de Mantenimiento y agregar los estilos**.
 
-## 08 Home (December 8, January 17, 18, 19, 25, February 2, 3, 8, 15, 21, 25, 27, March 1 )
+## 08 Home (December 8, January 17, 18, 19, 25, February 2, 3, 8, 15, 21, 25, 27, March 1, 7, 8 )
 
 - PT-12: **Crear componente de Buscador y agregarle estilos de origen**.
 - PT-13: **Crear componente de Carousel de imagenes incluyendo los estilos de origen de la versión 1**.
@@ -48,3 +48,4 @@ Proyecto creado a partir del Curso de Frontend Developer Platzi realizado en Ang
 - PT-21: **Avance en un 95% del carousel de videos**.
 - PT-22: **Reorganización de código HTML y CSS del componente carousel**.
 - PT-23: **Reorganización de código TypeScript del componente carousel**.
+- PT-Final: **Terminar de agregar items a los carouseles del proyecto**.
